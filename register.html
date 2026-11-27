@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register Page</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .register-box{
+            width: 400px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+        }
+
+        .logo{
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: #222;
+            display: inline-block;
+        }
+
+        h2{
+            margin-bottom: 10px;
+        }
+
+        .subtitle{
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input{
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 18px;
+            outline: none;
+        }
+
+        .register-btn{
+            width: 100%;
+            padding: 12px;
+            background: #4169E1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-btn:hover{
+            background: #365fbb;
+        }
+
+        .bottom{
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .bottom a{
+            text-decoration: none;
+            color: #4169E1;
+        }
+
+        </style>
+    </head>
+    <body>
+          
+        <div class="register-box">
+
+            <a href="practicing.html" class="logo">SHOP EASE</a>
+
+            <h2>Create Account</h2>
+            <p class="subtitle">Join Shop Ease today.</p>
+
+            <form action="login.html">
+                <label>Full name</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Email address</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm your password" required>
+
+                <button type="submit" class="register-btn">Create Account</button>
+            </form>
+
+            <p class="bottom">
+                Already have an account? 
+                <a href="login.html" class="login-link">Login</a>
+            </p>
+        </div>
+    </body>
+</html>

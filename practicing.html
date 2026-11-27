@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/all.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: arial, sans-serif;
+            background-color: #f5f5f5;
+        
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 22px 7%;
+        
+        }
+
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+    
+        }
+
+        .links a{
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 14px;
+            
+        }
+
+        .links a:hover{
+            color: blue;
+        }
+
+        .links a i{
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .links-cart{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .user-buttons{
+            display: flex;
+            gap: 10px;
+    
+        }
+
+        .user-buttons a{
+            text-decoration: none;
+            padding: 11px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login{
+            color: #222;
+            border: 1px solid #222;
+        }
+
+        .register{
+            color: #fff;
+            background-color: #222;
+        }
+
+        .products{
+            padding: 50px 8%;
+            text-align: center;
+            background: #f3ede4;
+        }
+
+        .products h2{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .products p{
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .product-card:hover{
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .product-card{
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .product-card img{
+            width: 100%;
+            border-radius: 12px;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .product-card h3{
+            margin: 15px 0 5px;
+        }
+
+        .product-card button{
+            width: 100%;
+            background: #222;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .categories{
+            padding: 50px 8%;
+            text-align: center;
+            background: #f3ede4;
+        }
+
+        .categories h2{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .categories p{
+            color: #666;
+        }
+
+        .category-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .category-card{
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .category-card img{
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .categories h3{
+            padding: 15px;
+        }
+
+        .category-card:hover{
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .mobile-menu{
+            display: none;
+        }
+            
+        @media(max-width: 600px){
+            .nav{
+                padding: 15px;
+            }
+
+            .links{
+                display: none;
+            }
+
+            
+
+            .logo{
+                font-size: 22px;
+            }
+
+            .product-container{
+                grid-template-columns: repeat(2,1fr);
+                gap: 10px;
+            }
+
+            .product-card img{
+                width: 100%;
+                height: 180px;
+                object-fit: contain;
+            }
+
+            .category-container{
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .mobile-menu{
+                display: block;
+                position: relative;
+            }
+
+            .mobile-menu summary{
+                list-style: none;
+                cursor: pointer;
+                font-size: 24px;
+            }
+
+            .menu-links{
+                position: absolute;
+                right: 0;
+                top: 35px;
+                background: white;
+                width: 180px;
+                padding: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu-links a{
+                text-decoration: none;
+                color: black;
+            }
+
+
+
+        }
+
+
+
+
+
+    </style>
+    </head>
+    <body>
+
+        <!--NAVBAR-->
+        <nav>
+            <div class="logo">
+                <i class="fas fa-shopping-cart"></i>
+                <h2>SHOP EASE</h2>
+            </div>
+
+            <div class="links">
+                <a href="#Home">Home</a>
+                <a href="#Products">Products</a>
+                <a href="#Categories">Categories</a>
+                <a href="#About">About</a>
+                <a href="#" class="links-cart"><i class="fas fa-shopping-cart"></i>MY CART</a>
+            </div>
+
+            <details class="mobile-menu">
+                <summary>
+                    <i class="fa-solid fa-bars"></i>
+                </summary>
+                
+                <div class="menu-links">
+                  <a href="#Home">Home</a>
+                  <a href="#Products">Products</a>
+                  <a href="#Categories">Categories</a>
+                  <a href="#About">About</a>
+                </div>
+
+            </details>
+
+           
+        </nav>
+
+            <!--PRODUCTS-->
+            <section class="products" id="Products">
+                <h2>Featured Products</h2>
+                <p>Discover our latest picks just for you</p>
+
+                <div class="product-container">
+
+                    <div class="product-card">
+                        <img src="shirt.jpg" alt="T-shirts">
+                        <h3>Short sleeves</h3>
+                        <p>#15,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="polo.jpg" alt="T-shirts">
+                        <h3>Short sleeves</h3>
+                        <p>#15,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="offwhite.jpg" alt="T-shirts">
+                        <h3>Short sleeves</h3>
+                        <p>#18,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="gabbana.jpg" alt="T-shirts">
+                        <h3>Short sleeves</h3>
+                        <p>#25,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="long-sleeve.jpg" alt="T-shirts">
+                        <h3>long sleeves</h3>
+                        <p>#30,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="denim- jacket.jpg" alt="T-shirts">
+                        <h3>Denim Jacket</h3>
+                        <p>#35,000</p>
+                        <button>Add to Cart</button>
+                    </div>
+
+                    </div>
+            </section>
+
+            <!--CATEGORIES-->
+            <section class="categories" id="Categories">
+                <h2>Shop by Categories</h2>
+                <p>Explore our diverse range of products</p>
+
+                <div class="category-container">
+
+                    <div class="category-card">
+                        <img src="fashion.jpg" alt="Fashion">
+                        <h3>Fashion</h3>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="shoes.jpg" alt="Shoes">
+                        <h3>Shoes</h3>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="headset.jpg" alt="Electronics">
+                        <h3>Electronics</h3>
+                    </div>
+
+                </div>
+                </section>
+       
+    </body>
+</html>
+        
